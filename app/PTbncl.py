@@ -1,8 +1,23 @@
-import flask
+from flask import Flask, render_template
+from flask_bootstrap import Bootstrap
 
-app = flask.Flask(__name__)
+app = Flask(__name__)
+bootstrap = Bootstrap(app)
+
 
 @app.route('/')
-@app.route('/home') 
+@app.route('/Home')
 def index():
-    return '<h1>Welcome home</h1>'
+    return render_template('index.html')
+
+@app.route('/user<name>')
+def user(name):
+    return render_template('user.html', name=name)
+
+@app.route('/About'.lower())
+def aboutPage():
+    return render_template('about.html')
+
+
+
+
