@@ -1,0 +1,11 @@
+
+config.py
+data-dev.sqlite
+requirements.txt
+__pycache__
+tests/
+venv/
+webApp3/__pycache__/
+app/__pycache__
+webApp3/app/__pycache__
+migrations/
